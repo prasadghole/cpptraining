@@ -8,11 +8,11 @@ public:
 
     Socket()
     {
-       cout << "I am constructor" << endl; 
+       cout << "Socket Opened" << endl; 
     }
     ~Socket()
     {
-       cout << "I am destructor" << endl; 
+       cout << "Socket closed" << endl; 
     }
 };
 
