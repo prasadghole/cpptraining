@@ -3,6 +3,9 @@ Programs used for c++training
 
 # Variable
 Variable is a location in computer memory where you can store and retrive value.
+
+# Uniform initialization
+
 # C++ history
 # Constructor
 # Constexpr
@@ -29,5 +32,6 @@ stream buffer get flushed
 3. stream goes out of scope and destructed
 4. 
 Not all streams are buffered cerr is un buffered
+
 
 

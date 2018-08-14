@@ -1,5 +1,7 @@
 #include <iostream>
 
+// C++ receipies
+
 using namespace std;
 
 class MyClass {
