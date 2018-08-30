@@ -16,6 +16,7 @@ of data which should not result in loss , incorrect interpretation or memory cor
 
 # C++ history
 # Constructor
+If a constructor also initializes a given data member, the member initializer is overridden.
 # Constexpr
 # static data members and function
 Order of static variable initializatoin and destruction are undefined. 
@@ -40,6 +41,13 @@ stream buffer get flushed
 3. stream goes out of scope and destructed
 4. 
 Not all streams are buffered cerr is un buffered
+
+
+# Smart Pointer
+The C++ smart pointer idiom resembles object creation in languages such as C#:
+you create the object and then let the system take care of deleting it at the correct time. 
+The difference is that no separate garbage collector runs in the background
+memory is managed through the standard C++ scoping rules so that the runtime environment is faster and more efficient.
 
 
 
