@@ -3,6 +3,14 @@ Programs used for c++training
 
 # Variable
 Variable is a location in computer memory where you can store and retrive value.
+C++ is strongly typed and statically typed lanaguage.
+A pointer type is used store address of memory location.
+
+Discuss issues with raw pointers.
+
+## Type safety
+Means during conversion , function parameter passing or return is storing appropriate type
+of data which should not result in loss , incorrect interpretation or memory corruption.
 
 # Uniform initialization
 
