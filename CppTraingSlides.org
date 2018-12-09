@@ -1,0 +1,29 @@
+#+Title: C++ Training
+#+Author: Prasad Ghole
+#+Email: prasad.ghole@lnttechservices.com
+#+REVEAL_ROOT: http://cdn.jsdelivr.net/reveal.js/3.0.0/ 
+#+REVEAL_THEME: night
+#+OPTIONS: toc:nil num:nil
+
+
+* Introduction
+** Hello World
+#+BEGIN_SRC C++ 
+#include <iostream>
+
+int main(int argc, char** argv)
+{
+     std::cout << "Hello, world." << std::endl;
+     return 0;
+}
+#+END_SRC
+
+#+RESULTS:
+| Hello | world. |
+
+** History
+** Setup
+   For windows we can download latest precompiled binaries for gcc tool chain at tdm-gcc.trdragon.org
+
+
+
