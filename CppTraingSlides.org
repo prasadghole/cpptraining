@@ -7,6 +7,8 @@
 
 
 * Introduction
+C++ is a statically typed, compiled, general-purpose, case-sensitive, free-form programming language that supports procedural,
+object-oriented, and generic programming paradigms.
 ** Hello World
 #+BEGIN_SRC C++ 
 #include <iostream>
@@ -22,8 +24,12 @@ int main(int argc, char** argv)
 | Hello | world. |
 
 ** History
+C++ was developed by Bjarne Stroustrup starting in 1979 at Bell Labs in Murray Hill, New Jersey,
+as an enhancement to the C language and originally named C with Classes but later it was renamed 
+C++ in 1983.
 ** Setup
    For windows we can download latest precompiled binaries for gcc tool chain at tdm-gcc.trdragon.org
 
 
 
+** Build Process
