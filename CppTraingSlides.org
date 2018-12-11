@@ -1,35 +1,71 @@
 #+Title: C++ Training
-#+Author: Prasad Ghole
+# +Author: Prasad Ghole
 #+Email: prasad.ghole@lnttechservices.com
 #+REVEAL_ROOT: http://cdn.jsdelivr.net/reveal.js/3.0.0/ 
 #+REVEAL_THEME: night
-#+OPTIONS: toc:nil num:nil
+#+OPTIONS: toc:nil num:nil timestamp:nil
 
 
 * Introduction
 C++ is a statically typed, compiled, general-purpose, case-sensitive, free-form programming language that supports procedural,
 object-oriented, and generic programming paradigms.
-** Hello World
+* Hello World
 #+BEGIN_SRC C++ 
 #include <iostream>
 
 int main(int argc, char** argv)
 {
-     std::cout << "Hello, world." << std::endl;
+     std::cout << "Hello, world. To C++ " << std::endl;
      return 0;
 }
 #+END_SRC
 
 #+RESULTS:
-| Hello | world. |
+| Hello | world. To C++ |
 
-** History
+* History
 C++ was developed by Bjarne Stroustrup starting in 1979 at Bell Labs in Murray Hill, New Jersey,
 as an enhancement to the C language and originally named C with Classes but later it was renamed 
 C++ in 1983.
-** Setup
-   For windows we can download latest precompiled binaries for gcc tool chain at tdm-gcc.trdragon.org
+* Setup
+  For windows we can download latest precompiled binaries for gcc tool chain at tdm-gcc.trdragon.org
+  
 
 
+* Build Tools
+  gnu toolchain provide g++ command to build executable from source code.
+#+BEGIN_SRC shell
+g++ Program.cpp
+#+END_SRC
+* Popular Tools
+* Build Process
+* Language Features
+* Variables and Fundamental Data Types
+** Numeric
+** Character
+* Complex Data Structure
+** Array
+** String
+** Structure
+** Unions
+** Enumerations
 
-** Build Process
+* Flow Control
+** if
+** while
+** for
+** switch
+* Operators
+** Arithmetic
+** Comparison
+** Bitwise
+
+* Iteration
+
+* Functions
+** Prototype
+** Parameters
+** inline 
+** Storage classes and scope
+
+* Classes and Objects
