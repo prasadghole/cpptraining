@@ -39,6 +39,9 @@ g++ Program.cpp
 #+END_SRC
 * Popular Tools
 * Build Process
+** Compiling
+** Linking
+
 * Language Features
 * Variables and Fundamental Data Types
 ** Numeric
@@ -68,4 +71,34 @@ g++ Program.cpp
 ** inline 
 ** Storage classes and scope
 
+* Header Files
+* Pointers 
+* Reference 
+* Array
+* struct
+* enumerations 
 * Classes and Objects
+* Constructor
+* copy constructor
+* Destructor
+* Member initializer list
+* Inheritance 
+* Interfaces
+* const
+* mutable
+* operator overloading 
+* this keyword
+* object lifetime
+* auto keyword 
+* Namespaces 
+* Unions
+* Why virtual destructors
+* Casting
+* Casting
+* Casting
+* Casting
+* Casting
+* Casting
+* Casting
+* Casting
+
