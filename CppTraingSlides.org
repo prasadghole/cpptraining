@@ -61,15 +61,39 @@ is called as build process.
 6. Inheritance
 7. Polymorphism 
 
-
+   
 * Variables and Fundamental Data Types
-| Category  | Type                      | Meaning       | Example |   |
-|-----------+---------------------------+---------------+---------+---|
-| boolean   | bool                      | true or false |         |   |
-| Character | char                      |               |         |   |
-| Integer   | short,int,long,long long  |               |         |   |
-| floating  | float, double,long double |               |         |   |
-| void      | no type                   |               |         |   |
+A variable is a named piece of memory a programmer defines.
+Every variable has a type which defines what kind of data it can store.
+** Variable Type
+ | Category  | Type                      | Meaning       | Example |   |
+ |-----------+---------------------------+---------------+---------+---|
+ | boolean   | bool                      | true or false |         |   |
+ | Character | char                      |               |         |   |
+ | Integer   | short,int,long,long long  |               |         |   |
+ | floating  | float, double,long double |               |         |   |
+ | void      | no type                   |               |         |   |
+** Variable initialization
+#+BEGIN_SRC c
+int Number_of_Employee = 100;
+//Uniform initialization
+int Number_Of_Employee = {100};
+#+END_SRC
+** Signed integer Data Types
+| Type        | Size | Range                                       |
+|-------------+------+---------------------------------------------|
+| signed char |    1 | -128 to 127                                 |
+| short       |    2 | -256 to 255                                 |
+| signed int  |    4 | -2147483648 to 2147483647                   |
+| long int    |    8 | -9223372036854775808 to 9223372036854775807 |
+
+** Varible with fixed values
+** Integer Literals 
+** Floating point Literals
+** Character Literals
+** Sting Literals
+** Sizeof operator
+Is used to obtain the number of bytes occupied by the type, variable or result of an expression.
 
 * Complex Data Structure
 ** Array
