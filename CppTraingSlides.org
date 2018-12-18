@@ -3,14 +3,14 @@
 #+Email: prasad.ghole@lnttechservices.com
 #+REVEAL_ROOT: http://cdn.jsdelivr.net/reveal.js/3.0.0/ 
 #+REVEAL_THEME: night
-#+OPTIONS: toc:nil num:nil timestamp:nil
+#+OPTIONS: toc:nil num:nil timestamp:nil 
 
 
 * Introduction
 C++ is a statically typed, compiled, general-purpose, case-sensitive, free-form programming language that supports procedural,
 object-oriented, and generic programming paradigms.
 * Hello World
-#+BEGIN_SRC C++ 
+#+BEGIN_SRC C++  :exports both
 #include <iostream>
 
 int main(int argc, char** argv)
@@ -73,6 +73,28 @@ Every variable has a type which defines what kind of data it can store.
  | Integer   | short,int,long,long long  |               |         |   |
  | floating  | float, double,long double |               |         |   |
  | void      | no type                   |               |         |   |
+** bool
+
+#+BEGIN_SRC C++  :exports both
+#include <iostream>
+
+int main()
+{
+std::cout << std::boolalpha << true << std::endl;
+std::cout << std::boolalpha << false << std::endl;
+std::cout << std::noboolalpha << true << std::endl;
+std::cout << std::noboolalpha << false << std::endl;
+}
+
+#+END_SRC
+
+#+RESULTS:
+|  true |
+| false |
+|     1 |
+|     0 |
+
+
 ** Variable initialization
 #+BEGIN_SRC c
 int Number_of_Employee = 100;
