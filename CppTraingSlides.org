@@ -20,11 +20,14 @@ object-oriented, and generic programming paradigms.
    
 * Hello World
 #+BEGIN_SRC C++  :exports both
-#include <iostream>
+#include <iostream>  //Used for output data to console
 
-int main(int argc, char** argv)
+//Program starts here
+int main()
 {
+     //Display this message
      std::cout << "Hello, world. " << std::endl;
+     // Program return successfully
      return 0;
 }
 #+END_SRC
@@ -147,7 +150,52 @@ Is used to obtain the number of bytes occupied by the type, variable or result o
 ** switch
 * Operators
 ** Arithmetic
+| Operations     | Operators | C++        |
+|----------------+-----------+------------|
+| Addition       | +         | count + 10 |
+| Subtraction    | -         | count - 10 |
+| Multiplication | *         | count * 10 |
+| Division       | /         | count / 10 |
+| Reminder       | %         | count % 10 |
+
+Interger division always produce integer output for eg.
+#+BEGIN_SRC C++ :exports both
+#include <iostream>  //Used for output data to console
+
+int main()
+{
+std::cout << "Division 7/2 = " << 7/2 << std::endl;
+std::cout << "Reminder 7%2 = " << 7%2 << std::endl;
+return 0;
+}
+#+END_SRC
+
+#+RESULTS:
+| Division | 7/2 | = | 3 |
+| Reminder | 7%2 | = | 1 |
+
+*** Prcedence of arithmetic operators
+| Operator | order of evluation                      |
+|----------+-----------------------------------------|
+| ()       | Evaluated first.                        |
+| *        | Evaluated second in left to right order |
+| /        |                                         |
+| %        |                                         |
+| +        | Evaluated last in left to right order   |
+|          |                                         |
+
+
 ** Comparison
+For various logical condition checking we need to compare to variables using comparison operator.
+| Operator | Sample | Meaning                    |
+|----------+--------+----------------------------|
+| >        | x > y  | x is greater than y        |
+| <        | x < y  | x is less than y           |
+| >=       | x >= y | x is greater or equal to y |
+| <=       | x <=y  | x is less or equal to y    |
+| ==       | x == y | if x is equal to y         |
+| !=       | x != y | if x is not equal to y     |
+
 ** Bitwise
 ** Increament and Decreament 
 *** Postfix Increament
