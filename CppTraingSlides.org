@@ -9,6 +9,15 @@
 * Introduction
 C++ is a statically typed, compiled, general-purpose, case-sensitive, free-form programming language that supports procedural,
 object-oriented, and generic programming paradigms.
+** Standard
+ | Year | C++ Standard       | Name  |
+ |------+--------------------+-------|
+ | 1998 | ISO/IEC 14882:1998 | C++98 |
+ | 2003 | ISO/IEC 14882:2003 | C++03 |
+ | 2011 | ISO/IEC 14882:2011 | C++11 |
+ | 2014 | ISO/IEC 14882:2014 | C++14 |
+ | 2017 | ISO/IEC 14882:2017 | C++17 |
+   
 * Hello World
 #+BEGIN_SRC C++  :exports both
 #include <iostream>
@@ -48,6 +57,16 @@ g++ Program.cpp
 
 * Build Process
 ** Compiling
+#+BEGIN_SRC shell :exports code
+g++ --std=c++y hello.cpp -o hello.cpp
+#+END_SRC
+
+#+RESULTS:
+| Microsoft                           | Windows | [Version  | 10.0.16299.785] |     |        |           |
+| (c)                                 |    2017 | Microsoft | Corporation.    | All | rights | reserved. |
+|                                     |         |           |                 |     |        |           |
+| c:\Users\20006401\cpptraining>More? |         |           |                 |     |        |           |
+
 ** Linking
 
 Converting C++ source code in machine language which can be exectured by underline microprocessor
@@ -73,20 +92,17 @@ Every variable has a type which defines what kind of data it can store.
  | Integer   | short,int,long,long long  |               |         |   |
  | floating  | float, double,long double |               |         |   |
  | void      | no type                   |               |         |   |
-** bool
-
+** bool 
 #+BEGIN_SRC C++  :exports both
-#include <iostream>
-
-int main()
+#include <iostream> 
+int main() 
 {
-std::cout << std::boolalpha << true << std::endl;
+std::cout << std::boolalpha << true << std::endl; 
 std::cout << std::boolalpha << false << std::endl;
-std::cout << std::noboolalpha << true << std::endl;
-std::cout << std::noboolalpha << false << std::endl;
-}
-
-#+END_SRC
+ std::cout << std::noboolalpha << true << std::endl;
+ std::cout << std::noboolalpha << false << std::endl;
+} 
+#+END_SRC 
 
 #+RESULTS:
 |  true |
@@ -96,7 +112,7 @@ std::cout << std::noboolalpha << false << std::endl;
 
 
 ** Variable initialization
-#+BEGIN_SRC c
+#+BEGIN_SRC C++
 int Number_of_Employee = 100;
 //Uniform initialization
 int Number_Of_Employee = {100};
@@ -133,6 +149,43 @@ Is used to obtain the number of bytes occupied by the type, variable or result o
 ** Arithmetic
 ** Comparison
 ** Bitwise
+** Increament and Decreament 
+*** Postfix Increament
+#+BEGIN_SRC C++ :exports both
+  #include <iostream> 
+  int main() 
+  {
+     int total = 0;
+     int count = 5;
+    std::cout << "count\t" << count << std::endl << "total\t" << total << std::endl ;
+    count = total++  + 20; 
+    std::cout << "count\t" << count << std::endl << "total\t" << total  << std::endl;
+    }
+#+END_SRC
+
+#+RESULTS:
+| count |  5 |
+| total |  0 |
+| count | 20 |
+| total |  1 |
+*** Prefix Increament
+#+BEGIN_SRC C++ :exports both
+  #hinclude <iostream> 
+  int main() 
+  {
+     int total = 0;
+     int count = 5;
+    std::cout << "count\t" << count << std::endl << "total\t" << total << std::endl ;
+    count = ++total+ 20; 
+    std::cout << "count\t" << count << std::endl << "total\t" << total  << std::endl;
+    }
+#+END_SRC
+
+#+RESULTS:
+| count |  5 |
+| total |  0 |
+| count | 21 |
+| total |  1 |
 
 * Iteration
 
