@@ -3,7 +3,6 @@
 <head>
 <meta charset="utf-8"/>
 <title>C++ Training</title>
-<meta name="author" content="(Prasad Ghole)"/>
 <style type="text/css">
 .underline { text-decoration: underline; }
 </style>
@@ -26,43 +25,121 @@
 <body>
 <div class="reveal">
 <div class="slides">
-<section id="sec-title-slide"><h1 class="title">C++ Training</h1><h2 class="author">Prasad Ghole</h2><p class="date">Created: 2018-12-09 Sun 20:27</p>
+<section id="sec-title-slide"><h1 class="title">C++ Training</h1>
 </section>
 
 
 <section>
-<section id="slide-orgc9ce1d4">
-<h2 id="orgc9ce1d4">Introduction</h2>
+<section id="slide-org25a05c9">
+<h2 id="org25a05c9">Introduction</h2>
 <p>
 C++ is a statically typed, compiled, general-purpose, case-sensitive, free-form programming language that supports procedural,
-object-oriented, and generic programming
+object-oriented, and generic programming paradigms.
 </p>
 </section>
-<section id="slide-orgec1833a">
-<h3 id="orgec1833a">Hello World</h3>
+<section id="slide-org138b708">
+<h3 id="org138b708">Standard</h3>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">Year</th>
+<th scope="col" class="org-left">C++ Standard</th>
+<th scope="col" class="org-left">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">1998</td>
+<td class="org-left">ISO/IEC 14882:1998</td>
+<td class="org-left">C++98</td>
+</tr>
+
+<tr>
+<td class="org-right">2003</td>
+<td class="org-left">ISO/IEC 14882:2003</td>
+<td class="org-left">C++03</td>
+</tr>
+
+<tr>
+<td class="org-right">2011</td>
+<td class="org-left">ISO/IEC 14882:2011</td>
+<td class="org-left">C++11</td>
+</tr>
+
+<tr>
+<td class="org-right">2014</td>
+<td class="org-left">ISO/IEC 14882:2014</td>
+<td class="org-left">C++14</td>
+</tr>
+
+<tr>
+<td class="org-right">2017</td>
+<td class="org-left">ISO/IEC 14882:2017</td>
+<td class="org-left">C++17</td>
+</tr>
+</tbody>
+</table>
+
+</section>
+</section>
+<section>
+<section id="slide-org2da31b4">
+<h2 id="org2da31b4">Hello World</h2>
 <div class="org-src-container">
 
-<pre  class="src src-C++"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">iostream</span><span style="color: #4f97d7;">&gt;</span>
+<pre  class="src src-C++"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">iostream</span><span style="color: #4f97d7;">&gt;</span>  <span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">Used for output data to console</span>
 
-<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #bc6ec5; font-weight: bold;">main</span><span style="color: #4f97d7;">(</span><span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">argc</span>, <span style="color: #ce537a; font-weight: bold;">char</span>** <span style="color: #7590db;">argv</span><span style="color: #4f97d7;">)</span>
+<span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">Program starts here</span>
+<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #bc6ec5; font-weight: bold;">main</span><span style="color: #4f97d7;">()</span>
 <span style="color: #4f97d7;">{</span>
-     <span style="color: #a45bad;">std</span>::cout &lt;&lt; <span style="color: #2d9574;">"Hello, world."</span> &lt;&lt; <span style="color: #a45bad;">std</span>::endl;
+     <span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">Display this message</span>
+     <span style="color: #a45bad;">std</span>::cout &lt;&lt; <span style="color: #2d9574;">"Hello, world. "</span> &lt;&lt; <span style="color: #a45bad;">std</span>::endl;
+     <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Program return successfully</span>
      <span style="color: #4f97d7; font-weight: bold;">return</span> <span style="color: #a45bad;">0</span>;
 <span style="color: #4f97d7;">}</span>
 </pre>
 </div>
 
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">Hello</td>
+<td class="org-left">world.</td>
+</tr>
+</tbody>
+</table>
+
 </section>
-<section id="slide-orgfd8cbd1">
-<h3 id="orgfd8cbd1">History</h3>
+</section>
+<section>
+<section id="slide-org86f34f8">
+<h2 id="org86f34f8">History</h2>
 <p>
 C++ was developed by Bjarne Stroustrup starting in 1979 at Bell Labs in Murray Hill, New Jersey,
 as an enhancement to the C language and originally named C with Classes but later it was renamed 
 C++ in 1983.
 </p>
 </section>
-<section id="slide-org899cb6f">
-<h3 id="org899cb6f">Setup</h3>
+</section>
+<section>
+<section id="slide-org2ad4179">
+<h2 id="org2ad4179">Setup</h2>
 <p>
 For windows we can download latest precompiled binaries for gcc tool chain at tdm-gcc.trdragon.org
 </p>
@@ -70,8 +147,866 @@ For windows we can download latest precompiled binaries for gcc tool chain at td
 
 
 </section>
-<section id="slide-orge5821d7">
-<h3 id="orge5821d7">Build Process</h3>
+</section>
+<section>
+<section id="slide-org5dda888">
+<h2 id="org5dda888">Build Tools</h2>
+<p>
+gnu toolchain provide g++ command to build executable from source code.
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-shell">g++ Program.cpp
+</pre>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org405bb96">
+<h2 id="org405bb96">Popular Tools</h2>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Tools</th>
+<th scope="col" class="org-left">Platforms</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Visual Studio</td>
+<td class="org-left">Windows</td>
+</tr>
+
+<tr>
+<td class="org-left">Xcode</td>
+<td class="org-left">Mac</td>
+</tr>
+
+<tr>
+<td class="org-left">CodeBlock</td>
+<td class="org-left">Windows</td>
+</tr>
+
+<tr>
+<td class="org-left">QT Creator</td>
+<td class="org-left">Windows, linux and Mac</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+
+</section>
+</section>
+<section>
+<section id="slide-orgb466c16">
+<h2 id="orgb466c16">Build Process</h2>
+<div class="outline-text-2" id="text-orgb466c16">
+</div>
+</section>
+<section id="slide-org8724660">
+<h3 id="org8724660">Compiling</h3>
+<div class="org-src-container">
+
+<pre  class="src src-shell">g++ --std=c++y hello.cpp -o hello.cpp
+</pre>
+</div>
+
+</section>
+<section id="slide-orgd5fe32b">
+<h3 id="orgd5fe32b">Linking</h3>
+<p>
+Converting C++ source code in machine language which can be exectured by underline microprocessor
+is called as build process.
+</p>
+</section>
+</section>
+<section>
+<section id="slide-org24602b8">
+<h2 id="org24602b8">Language Features</h2>
+<ol>
+<li>Statically typed</li>
+<li>Support procedural , object oriented and generic programming paradigms</li>
+<li>Compiled</li>
+<li>Versatile standard library</li>
+<li>Encapsulation</li>
+<li>Inheritance</li>
+<li>Polymorphism</li>
+
+</ol>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org13c5b4e">
+<h2 id="org13c5b4e">Variables and Fundamental Data Types</h2>
+<p>
+A variable is a named piece of memory a programmer defines.
+Every variable has a type which defines what kind of data it can store.
+</p>
+</section>
+<section id="slide-org0bd3ae8">
+<h3 id="org0bd3ae8">Variable Type</h3>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Category</th>
+<th scope="col" class="org-left">Type</th>
+<th scope="col" class="org-left">Meaning</th>
+<th scope="col" class="org-left">Example</th>
+<th scope="col" class="org-left">&#xa0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">boolean</td>
+<td class="org-left">bool</td>
+<td class="org-left">true or false</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Character</td>
+<td class="org-left">char</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Integer</td>
+<td class="org-left">short,int,long,long long</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">floating</td>
+<td class="org-left">float, double,long double</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">void</td>
+<td class="org-left">no type</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="slide-org1fa447b">
+<h3 id="org1fa447b">bool</h3>
+<div class="org-src-container">
+
+<pre  class="src src-C++"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">iostream</span><span style="color: #4f97d7;">&gt;</span> 
+<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #bc6ec5; font-weight: bold;">main</span><span style="color: #4f97d7;">()</span> 
+<span style="color: #4f97d7;">{</span>
+<span style="color: #a45bad;">std</span>::cout &lt;&lt; <span style="color: #a45bad;">std</span>::boolalpha &lt;&lt; <span style="color: #a45bad;">true</span> &lt;&lt; <span style="color: #a45bad;">std</span>::endl; 
+<span style="color: #a45bad;">std</span>::cout &lt;&lt; <span style="color: #a45bad;">std</span>::boolalpha &lt;&lt; <span style="color: #a45bad;">false</span> &lt;&lt; <span style="color: #a45bad;">std</span>::endl;
+ <span style="color: #a45bad;">std</span>::cout &lt;&lt; <span style="color: #a45bad;">std</span>::noboolalpha &lt;&lt; <span style="color: #a45bad;">true</span> &lt;&lt; <span style="color: #a45bad;">std</span>::endl;
+ <span style="color: #a45bad;">std</span>::cout &lt;&lt; <span style="color: #a45bad;">std</span>::noboolalpha &lt;&lt; <span style="color: #a45bad;">false</span> &lt;&lt; <span style="color: #a45bad;">std</span>::endl;
+<span style="color: #4f97d7;">}</span> 
+</pre>
+</div>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-right">true</td>
+</tr>
+
+<tr>
+<td class="org-right">false</td>
+</tr>
+
+<tr>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-right">0</td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+<section id="slide-orge4c2411">
+<h3 id="orge4c2411">Variable initialization</h3>
+<div class="org-src-container">
+
+<pre  class="src src-C++"><span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">Number_of_Employee</span> = <span style="color: #a45bad;">100</span>;
+<span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">Uniform initialization</span>
+<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">Number_Of_Employee</span> = <span style="color: #4f97d7;">{</span><span style="color: #a45bad;">100</span><span style="color: #4f97d7;">}</span>;
+</pre>
+</div>
+</section>
+<section id="slide-org3dc6ff7">
+<h3 id="org3dc6ff7">Signed integer Data Types</h3>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Type</th>
+<th scope="col" class="org-right">Size</th>
+<th scope="col" class="org-left">Range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">signed char</td>
+<td class="org-right">1</td>
+<td class="org-left">-128 to 127</td>
+</tr>
+
+<tr>
+<td class="org-left">short</td>
+<td class="org-right">2</td>
+<td class="org-left">-256 to 255</td>
+</tr>
+
+<tr>
+<td class="org-left">signed int</td>
+<td class="org-right">4</td>
+<td class="org-left">-2147483648 to 2147483647</td>
+</tr>
+
+<tr>
+<td class="org-left">long int</td>
+<td class="org-right">8</td>
+<td class="org-left">-9223372036854775808 to 9223372036854775807</td>
+</tr>
+</tbody>
+</table>
+
+</section>
+<section id="slide-org6e53a9c">
+<h3 id="org6e53a9c">Varible with fixed values</h3>
+</section>
+<section id="slide-org9008112">
+<h3 id="org9008112">Integer Literals</h3>
+</section>
+<section id="slide-org5b39a07">
+<h3 id="org5b39a07">Floating point Literals</h3>
+</section>
+<section id="slide-org61874ed">
+<h3 id="org61874ed">Character Literals</h3>
+</section>
+<section id="slide-org49416d9">
+<h3 id="org49416d9">Sting Literals</h3>
+</section>
+<section id="slide-org3198a8a">
+<h3 id="org3198a8a">Sizeof operator</h3>
+<p>
+Is used to obtain the number of bytes occupied by the type, variable or result of an expression.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orgd144e7c">
+<h2 id="orgd144e7c">Complex Data Structure</h2>
+<div class="outline-text-2" id="text-orgd144e7c">
+</div>
+</section>
+<section id="slide-orga9d0b22">
+<h3 id="orga9d0b22">Array</h3>
+</section>
+<section id="slide-orga8cbdb9">
+<h3 id="orga8cbdb9">String</h3>
+</section>
+<section id="slide-orgb734fd3">
+<h3 id="orgb734fd3">Structure</h3>
+</section>
+<section id="slide-org52338ba">
+<h3 id="org52338ba">Unions</h3>
+</section>
+<section id="slide-orgd8cfed0">
+<h3 id="orgd8cfed0">Enumerations</h3>
+
+</section>
+</section>
+<section>
+<section id="slide-org1ce5f5e">
+<h2 id="org1ce5f5e">Flow Control</h2>
+<div class="outline-text-2" id="text-org1ce5f5e">
+</div>
+</section>
+<section id="slide-org0b93dcd">
+<h3 id="org0b93dcd">if</h3>
+</section>
+<section id="slide-orga0aaeca">
+<h3 id="orga0aaeca">while</h3>
+</section>
+<section id="slide-org6a369fb">
+<h3 id="org6a369fb">for</h3>
+</section>
+<section id="slide-org12f6cf7">
+<h3 id="org12f6cf7">switch</h3>
+</section>
+</section>
+<section>
+<section id="slide-org9169e4f">
+<h2 id="org9169e4f">Operators</h2>
+<div class="outline-text-2" id="text-org9169e4f">
+</div>
+</section>
+<section id="slide-orgfa36e19">
+<h3 id="orgfa36e19">Arithmetic</h3>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Operations</th>
+<th scope="col" class="org-left">Operators</th>
+<th scope="col" class="org-left">C++</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Addition</td>
+<td class="org-left">+</td>
+<td class="org-left">count + 10</td>
+</tr>
+
+<tr>
+<td class="org-left">Subtraction</td>
+<td class="org-left">-</td>
+<td class="org-left">count - 10</td>
+</tr>
+
+<tr>
+<td class="org-left">Multiplication</td>
+<td class="org-left">*</td>
+<td class="org-left">count * 10</td>
+</tr>
+
+<tr>
+<td class="org-left">Division</td>
+<td class="org-left">/</td>
+<td class="org-left">count / 10</td>
+</tr>
+
+<tr>
+<td class="org-left">Reminder</td>
+<td class="org-left">%</td>
+<td class="org-left">count % 10</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Interger division always produce integer output for eg.
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-C++"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">iostream</span><span style="color: #4f97d7;">&gt;</span>  <span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">Used for output data to console</span>
+
+<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #bc6ec5; font-weight: bold;">main</span><span style="color: #4f97d7;">()</span>
+<span style="color: #4f97d7;">{</span>
+<span style="color: #a45bad;">std</span>::cout &lt;&lt; <span style="color: #2d9574;">"Division 7/2 = "</span> &lt;&lt; <span style="color: #a45bad;">7</span>/<span style="color: #a45bad;">2</span> &lt;&lt; <span style="color: #a45bad;">std</span>::endl;
+<span style="color: #a45bad;">std</span>::cout &lt;&lt; <span style="color: #2d9574;">"Reminder 7%2 = "</span> &lt;&lt; <span style="color: #a45bad;">7</span>%<span style="color: #a45bad;">2</span> &lt;&lt; <span style="color: #a45bad;">std</span>::endl;
+<span style="color: #4f97d7; font-weight: bold;">return</span> <span style="color: #a45bad;">0</span>;
+<span style="color: #4f97d7;">}</span>
+</pre>
+</div>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-left" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">Division</td>
+<td class="org-right">7/2</td>
+<td class="org-left">=</td>
+<td class="org-right">3</td>
+</tr>
+
+<tr>
+<td class="org-left">Reminder</td>
+<td class="org-right">7%2</td>
+<td class="org-left">=</td>
+<td class="org-right">1</td>
+</tr>
+</tbody>
+</table>
+
+</section>
+<section id="slide-org689c960">
+<h4 id="org689c960">Prcedence of arithmetic operators</h4>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Operator</th>
+<th scope="col" class="org-left">order of evluation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">()</td>
+<td class="org-left">Evaluated first.</td>
+</tr>
+
+<tr>
+<td class="org-left">* /  %</td>
+<td class="org-left">Evaluated second in left to right order</td>
+</tr>
+
+<tr>
+<td class="org-left">+  -</td>
+<td class="org-left">Evaluated last in left to right order</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="slide-org4e881d0">
+<h3 id="org4e881d0">Increament and Decreament</h3>
+<div class="outline-text-3" id="text-org4e881d0">
+</div>
+</section>
+<section id="slide-orgf799fed">
+<h4 id="orgf799fed">Postfix Increament</h4>
+<div class="org-src-container">
+
+<pre  class="src src-C++"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">iostream</span><span style="color: #4f97d7;">&gt;</span> 
+<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #bc6ec5; font-weight: bold;">main</span><span style="color: #4f97d7;">()</span> 
+<span style="color: #4f97d7;">{</span>
+   <span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">total</span> = <span style="color: #a45bad;">0</span>;
+   <span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">count</span> = <span style="color: #a45bad;">5</span>;
+  <span style="color: #a45bad;">std</span>::cout &lt;&lt; <span style="color: #2d9574;">"count\t"</span> &lt;&lt; count &lt;&lt; <span style="color: #a45bad;">std</span>::endl &lt;&lt; <span style="color: #2d9574;">"total\t"</span> &lt;&lt; total &lt;&lt; <span style="color: #a45bad;">std</span>::endl ;
+  count = total++  + <span style="color: #a45bad;">20</span>; 
+  <span style="color: #a45bad;">std</span>::cout &lt;&lt; <span style="color: #2d9574;">"count\t"</span> &lt;&lt; count &lt;&lt; <span style="color: #a45bad;">std</span>::endl &lt;&lt; <span style="color: #2d9574;">"total\t"</span> &lt;&lt; total  &lt;&lt; <span style="color: #a45bad;">std</span>::endl;
+  <span style="color: #4f97d7;">}</span>
+</pre>
+</div>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">count</td>
+<td class="org-right">5</td>
+</tr>
+
+<tr>
+<td class="org-left">total</td>
+<td class="org-right">0</td>
+</tr>
+
+<tr>
+<td class="org-left">count</td>
+<td class="org-right">20</td>
+</tr>
+
+<tr>
+<td class="org-left">total</td>
+<td class="org-right">1</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="slide-orgac4160d">
+<h4 id="orgac4160d">Prefix Increament</h4>
+<div class="org-src-container">
+
+<pre  class="src src-C++"><span style="color: #bc6ec5;">#hinclude</span> <span style="color: #4f97d7;">&lt;</span>iostream<span style="color: #4f97d7;">&gt;</span> 
+<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #bc6ec5; font-weight: bold;">main</span><span style="color: #4f97d7;">()</span> 
+<span style="color: #4f97d7;">{</span>
+   <span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">total</span> = <span style="color: #a45bad;">0</span>;
+   <span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">count</span> = <span style="color: #a45bad;">5</span>;
+  <span style="color: #a45bad;">std</span>::cout &lt;&lt; <span style="color: #2d9574;">"count\t"</span> &lt;&lt; count &lt;&lt; <span style="color: #a45bad;">std</span>::endl &lt;&lt; <span style="color: #2d9574;">"total\t"</span> &lt;&lt; total &lt;&lt; <span style="color: #a45bad;">std</span>::endl ;
+  count = ++total+ <span style="color: #a45bad;">20</span>; 
+  <span style="color: #a45bad;">std</span>::cout &lt;&lt; <span style="color: #2d9574;">"count\t"</span> &lt;&lt; count &lt;&lt; <span style="color: #a45bad;">std</span>::endl &lt;&lt; <span style="color: #2d9574;">"total\t"</span> &lt;&lt; total  &lt;&lt; <span style="color: #a45bad;">std</span>::endl;
+  <span style="color: #4f97d7;">}</span>
+</pre>
+</div>
+
+
+</section>
+<section id="slide-org8317ee2">
+<h3 id="org8317ee2">Comparison</h3>
+<p>
+For various logical condition checking we need to compare to variables using comparison operator.
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Operator</th>
+<th scope="col" class="org-left">Sample</th>
+<th scope="col" class="org-left">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">&gt;</td>
+<td class="org-left">x &gt; y</td>
+<td class="org-left">x is greater than y</td>
+</tr>
+
+<tr>
+<td class="org-left">&lt;</td>
+<td class="org-left">x &lt; y</td>
+<td class="org-left">x is less than y</td>
+</tr>
+
+<tr>
+<td class="org-left">&gt;=</td>
+<td class="org-left">x &gt;= y</td>
+<td class="org-left">x is greater or equal to y</td>
+</tr>
+
+<tr>
+<td class="org-left">&lt;=</td>
+<td class="org-left">x &lt;=y</td>
+<td class="org-left">x is less or equal to y</td>
+</tr>
+
+<tr>
+<td class="org-left">==</td>
+<td class="org-left">x == y</td>
+<td class="org-left">if x is equal to y</td>
+</tr>
+
+<tr>
+<td class="org-left">!=</td>
+<td class="org-left">x != y</td>
+<td class="org-left">if x is not equal to y</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Reversing order of operators may cause complier to emit syntax error. But some operator like != when 
+written like <code>! will be logical error.
+Also equality operator =</code> when written like = will be logical error.
+</p>
+</section>
+<section id="slide-org91b41d2">
+<h4 id="org91b41d2">Prcedence of comparison operators</h4>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Operator</th>
+<th scope="col" class="org-left">order of evluation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">()</td>
+<td class="org-left">Evaluated first.</td>
+</tr>
+
+<tr>
+<td class="org-left">* /  %</td>
+<td class="org-left">Evaluated second in left to right order</td>
+</tr>
+
+<tr>
+<td class="org-left">&lt;&lt; &gt;&gt;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&lt; &lt;= &gt; &gt;=</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>= !</code></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">=</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+
+</section>
+<section id="slide-orgeaca0d8">
+<h3 id="orgeaca0d8">Bitwise</h3>
+<p>
+These operators allowes to manuplate individual bits of integer type variables.
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">operation</th>
+<th scope="col" class="org-left">Operator</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">One's complement</td>
+<td class="org-left">~x</td>
+</tr>
+
+<tr>
+<td class="org-left">left shift</td>
+<td class="org-left">x &lt;&lt; y</td>
+</tr>
+
+<tr>
+<td class="org-left">right shift</td>
+<td class="org-left">x &gt;&gt; y</td>
+</tr>
+
+<tr>
+<td class="org-left">Bitwise and</td>
+<td class="org-left">x &amp; y</td>
+</tr>
+
+<tr>
+<td class="org-left">Bitwise or</td>
+<td class="org-left">x &vert;</td>
+</tr>
+
+<tr>
+<td class="org-left">Bitwise Xor</td>
+<td class="org-left">x ^y</td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org2ae7dc0">
+<h2 id="org2ae7dc0">Iteration</h2>
+
+</section>
+</section>
+<section>
+<section id="slide-orgcf89172">
+<h2 id="orgcf89172">Functions</h2>
+<div class="outline-text-2" id="text-orgcf89172">
+</div>
+</section>
+<section id="slide-orgceff7e2">
+<h3 id="orgceff7e2">Prototype</h3>
+</section>
+<section id="slide-org28fc9b4">
+<h3 id="org28fc9b4">Parameters</h3>
+</section>
+<section id="slide-orge48b556">
+<h3 id="orge48b556">inline</h3>
+</section>
+<section id="slide-org236f300">
+<h3 id="org236f300">Storage classes and scope</h3>
+
+</section>
+</section>
+<section>
+<section id="slide-org42e33db">
+<h2 id="org42e33db">Header Files</h2>
+</section>
+</section>
+<section>
+<section id="slide-orga4ffa7c">
+<h2 id="orga4ffa7c">Pointers</h2>
+</section>
+</section>
+<section>
+<section id="slide-org02e70a8">
+<h2 id="org02e70a8">Reference</h2>
+</section>
+</section>
+<section>
+<section id="slide-org27eb663">
+<h2 id="org27eb663">Array</h2>
+</section>
+</section>
+<section>
+<section id="slide-org976a876">
+<h2 id="org976a876">struct</h2>
+</section>
+</section>
+<section>
+<section id="slide-orge4d6294">
+<h2 id="orge4d6294">enumerations</h2>
+</section>
+</section>
+<section>
+<section id="slide-orgdac50c1">
+<h2 id="orgdac50c1">Classes and Objects</h2>
+</section>
+</section>
+<section>
+<section id="slide-org7b486b5">
+<h2 id="org7b486b5">Constructor</h2>
+</section>
+</section>
+<section>
+<section id="slide-org8c68ada">
+<h2 id="org8c68ada">copy constructor</h2>
+</section>
+</section>
+<section>
+<section id="slide-org2a01051">
+<h2 id="org2a01051">Destructor</h2>
+</section>
+</section>
+<section>
+<section id="slide-orgc869eb9">
+<h2 id="orgc869eb9">Member initializer list</h2>
+</section>
+</section>
+<section>
+<section id="slide-orgb7f42bf">
+<h2 id="orgb7f42bf">Inheritance</h2>
+</section>
+</section>
+<section>
+<section id="slide-org625c089">
+<h2 id="org625c089">Interfaces</h2>
+</section>
+</section>
+<section>
+<section id="slide-orgbb99845">
+<h2 id="orgbb99845">const</h2>
+</section>
+</section>
+<section>
+<section id="slide-org4d58c7e">
+<h2 id="org4d58c7e">mutable</h2>
+</section>
+</section>
+<section>
+<section id="slide-org6feb712">
+<h2 id="org6feb712">operator overloading</h2>
+</section>
+</section>
+<section>
+<section id="slide-org7b29f0b">
+<h2 id="org7b29f0b">this keyword</h2>
+</section>
+</section>
+<section>
+<section id="slide-orgdba2d39">
+<h2 id="orgdba2d39">object lifetime</h2>
+</section>
+</section>
+<section>
+<section id="slide-org43a0330">
+<h2 id="org43a0330">auto keyword</h2>
+</section>
+</section>
+<section>
+<section id="slide-org9bc9929">
+<h2 id="org9bc9929">Namespaces</h2>
+</section>
+</section>
+<section>
+<section id="slide-org33b72f3">
+<h2 id="org33b72f3">Unions</h2>
+</section>
+</section>
+<section>
+<section id="slide-org90f44f8">
+<h2 id="org90f44f8">Why virtual destructors</h2>
+</section>
+</section>
+<section>
+<section id="slide-org2d04d8b">
+<h2 id="org2d04d8b">Casting</h2>
 </section>
 </section>
 </div>
