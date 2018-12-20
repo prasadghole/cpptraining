@@ -180,33 +180,6 @@ return 0;
 | ()       | Evaluated first.                        |
 | * /  %   | Evaluated second in left to right order |
 | +  -     | Evaluated last in left to right order   |
-
-
-** Comparison
-For various logical condition checking we need to compare to variables using comparison operator.
-| Operator | Sample | Meaning                    |
-|----------+--------+----------------------------|
-| >        | x > y  | x is greater than y        |
-| <        | x < y  | x is less than y           |
-| >=       | x >= y | x is greater or equal to y |
-| <=       | x <=y  | x is less or equal to y    |
-| ==       | x == y | if x is equal to y         |
-| !=       | x != y | if x is not equal to y     |
-
-Reversing order of operators may cause complier to emit syntax error. But some operator like != when 
-written like =! will be logical error.
-Also equality operator == when written like = will be logical error.
-*** Prcedence of comparison operators
-| Operator  | order of evluation                      |
-|-----------+-----------------------------------------|
-| ()        | Evaluated first.                        |
-| * /  %    | Evaluated second in left to right order |
-| << >>     |                                         |
-| < <= > >= |                                         |
-| == !=     |                                         |
-| =         |                                       |
-
-** Bitwise
 ** Increament and Decreament 
 *** Postfix Increament
 #+BEGIN_SRC C++ :exports both
@@ -244,6 +217,43 @@ Also equality operator == when written like = will be logical error.
 | total |  0 |
 | count | 21 |
 | total |  1 |
+
+
+** Comparison
+For various logical condition checking we need to compare to variables using comparison operator.
+| Operator | Sample | Meaning                    |
+|----------+--------+----------------------------|
+| >        | x > y  | x is greater than y        |
+| <        | x < y  | x is less than y           |
+| >=       | x >= y | x is greater or equal to y |
+| <=       | x <=y  | x is less or equal to y    |
+| ==       | x == y | if x is equal to y         |
+| !=       | x != y | if x is not equal to y     |
+
+Reversing order of operators may cause complier to emit syntax error. But some operator like != when 
+written like =! will be logical error.
+Also equality operator == when written like = will be logical error.
+*** Prcedence of comparison operators
+| Operator  | order of evluation                      |
+|-----------+-----------------------------------------|
+| ()        | Evaluated first.                        |
+| * /  %    | Evaluated second in left to right order |
+| << >>     |                                         |
+| < <= > >= |                                         |
+| == !=     |                                         |
+| =         |                                         |
+
+** Bitwise
+These operators allowes to manuplate individual bits of integer type variables.
+| operation        | Operator |
+|------------------+----------|
+| One's complement | ~x       |
+| left shift       | x << y   |
+| right shift      | x >> y   |
+| Bitwise and      | x & y    |
+| Bitwise or       | x \vert y |
+| Bitwise Xor      | x ^y     |
+
 
 * Iteration
 
