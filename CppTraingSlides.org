@@ -19,20 +19,21 @@ object-oriented, and generic programming paradigms.
  | 2017 | ISO/IEC 14882:2017 | C++17 |
    
 * Hello World
-#+BEGIN_SRC C++  :exports both
+#+BEGIN_SRC C++  :exports both :cache yes
 #include <iostream>  //Used for output data to console
 
 //Program starts here
 int main()
 {
      //Display this message
+     //Expression
      std::cout << "Hello, world. " << std::endl;
      // Program return successfully
      return 0;
 }
 #+END_SRC
 
-#+RESULTS:
+#+RESULTS[3167d5daadb9288017c8d213d638e12e7444d900]:
 | Hello | world. |
 
 * History
@@ -96,7 +97,7 @@ Every variable has a type which defines what kind of data it can store.
  | floating  | float, double,long double |               |         |   |
  | void      | no type                   |               |         |   |
 ** bool 
-#+BEGIN_SRC C++  :exports both
+#+BEGIN_SRC C++  :exports both :cache yes
 #include <iostream> 
 int main() 
 {
@@ -107,7 +108,7 @@ std::cout << std::boolalpha << false << std::endl;
 } 
 #+END_SRC 
 
-#+RESULTS:
+#+RESULTS[761dc02922fa049315904bec55f4709d19fa6a39]:
 |  true |
 | false |
 |     1 |
@@ -128,6 +129,25 @@ int Number_Of_Employee = {100};
 | signed int  |    4 | -2147483648 to 2147483647                   |
 | long int    |    8 | -9223372036854775808 to 9223372036854775807 |
 
+** Signed and Unsigned 
+Below example shows behaviour when signed and unsigned values are mixed.
+#+BEGIN_SRC C++  :exports both :cache yes
+#include <iostream> 
+int main() 
+{
+unsigned u = 20;
+int i = -42;
+
+std::cout << i + i << std::endl;;
+std::cout << u + i << std::endl;
+} 
+#+END_SRC 
+
+#+RESULTS[32d1f3894007c02aac1578f090e38ec6cf803d2e]:
+|        -84 |
+| 4294967274 |
+
+# C++ Primer 2.1.2
 ** Varible with fixed values
 ** Integer Literals 
 ** Floating point Literals
@@ -159,7 +179,7 @@ Is used to obtain the number of bytes occupied by the type, variable or result o
 | Reminder       | %         | count % 10 |
 
 Interger division always produce integer output for eg.
-#+BEGIN_SRC C++ :exports both
+#+BEGIN_SRC C++ :exports both :cache yes
 #include <iostream>  //Used for output data to console
 
 int main()
@@ -170,7 +190,7 @@ return 0;
 }
 #+END_SRC
 
-#+RESULTS:
+#+RESULTS[188f91238c931739ca08b4491379a49494ca84e8]:
 | Division | 7/2 | = | 3 |
 | Reminder | 7%2 | = | 1 |
 
@@ -182,7 +202,7 @@ return 0;
 | +  -     | Evaluated last in left to right order   |
 ** Increament and Decreament 
 *** Postfix Increament
-#+BEGIN_SRC C++ :exports both
+#+BEGIN_SRC C++ :exports both :cache yes
   #include <iostream> 
   int main() 
   {
@@ -194,14 +214,15 @@ return 0;
     }
 #+END_SRC
 
-#+RESULTS:
+#+RESULTS[ccbe36bc80a25a3157d2e5a95e313481927fbe4e]:
 | count |  5 |
 | total |  0 |
 | count | 20 |
 | total |  1 |
+
 *** Prefix Increament
-#+BEGIN_SRC C++ :exports both
-  #hinclude <iostream> 
+#+BEGIN_SRC C++ :exports both :cache yes
+  #include <iostream> 
   int main() 
   {
      int total = 0;
@@ -212,7 +233,7 @@ return 0;
     }
 #+END_SRC
 
-#+RESULTS:
+#+RESULTS[b899901a7ea31195efe4334aca07f5f03a93e3e9]:
 | count |  5 |
 | total |  0 |
 | count | 21 |
@@ -245,14 +266,14 @@ Also equality operator == when written like = will be logical error.
 
 ** Bitwise
 These operators allowes to manuplate individual bits of integer type variables.
-| operation        | Operator |
-|------------------+----------|
-| One's complement | ~x       |
-| left shift       | x << y   |
-| right shift      | x >> y   |
-| Bitwise and      | x & y    |
+| operation        | Operator  |
+|------------------+-----------|
+| One's complement | ~x        |
+| left shift       | x << y    |
+| right shift      | x >> y    |
+| Bitwise and      | x & y     |
 | Bitwise or       | x \vert y |
-| Bitwise Xor      | x ^y     |
+| Bitwise Xor      | x ^y      |
 
 
 * Iteration
