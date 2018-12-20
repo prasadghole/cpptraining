@@ -114,7 +114,53 @@ std::cout << std::boolalpha << false << std::endl;
 |     1 |
 |     0 |
 
+** Literals
+Literals are tokens of C++ program that represent constant values embedded in source code.
+*** Interger Literals
+| Literal     | Desctiption                                                       |  Example |
+|-------------+-------------------------------------------------------------------+----------|
+| Decimal     | non zero decimal digit followed by zero or more significant digit |       42 |
+| Octal       | digit zero followed by zero or more octal digits (0-7)            |      052 |
+| Hexadecimal | character sequence 0x or 0X followed by hex digits (0-9 , a-f)    |     0x2a |
+| binary      | character sequence 0b or 0B followed by binary digits (0,1)       | 0b101010 |
 
+Since 2014 you can use optinal single quotes (') as a serperator.
+Following variables are initialized for same values
+#+BEGIN_SRC C++ :exports code :eval no
+unsigned long long l1 = 18446744073709550592ull; // C++11
+unsigned long long l2 = 18'446'744'073'709'550'592llu; // C++14
+unsigned long long l3 = 1844'6744'0737'0955'0592uLL; // C++14
+unsigned long long l4 = 184467'440737'0'95505'92LLU; // C++14
+#+END_SRC
+
+Hexadecimal literals ending in e or E followed by + or - must be seperated from operator with white space.
+#+BEGIN_SRC C++ :exports code :eval no
+auto x = 0xE+2.0;   // error
+auto y = 0xa+2.0;   // OK
+auto z = 0xE +2.0;  // OK
+auto q = (0xE)+2.0; // OK
+#+END_SRC
+*** Integer suffix
+    u or U unsigned suffix
+    ll or LL long long suffix
+#+BEGIN_SRC C++ :exports both :cache yes
+
+#include <iostream> 
+int main() 
+{
+std::cout << "sizeof(123u) " << sizeof(123u) << std::endl;
+std::cout << "ssizeof(123ul) " << sizeof(123ul) << std::endl;
+std::cout << "ssizeof(123ull) " << sizeof(123ull) << std::endl;
+} 
+
+#+END_SRC
+
+#+RESULTS[a8431c43c8eadc3d9ba3bb3f46ae1887f820de43]:
+| sizeof(123u)    | 4 |
+| ssizeof(123ul)  | 4 |
+| ssizeof(123ull) | 8 |
+
+# https://en.cppreference.com/w/cpp/language/integer_literal 
 ** Variable initialization
 #+BEGIN_SRC C++
 int Number_of_Employee = 100;
@@ -146,6 +192,22 @@ std::cout << u + i << std::endl;
 #+RESULTS[32d1f3894007c02aac1578f090e38ec6cf803d2e]:
 |        -84 |
 | 4294967274 |
+
+# C++ Primer 2.1.2
+*** Activity 1
+What will be output of this code ?
+ #+BEGIN_SRC C++ :exports code :eval yes
+
+#include <iostream> 
+int main() 
+{
+  for(signed int i = 10; i >= 0 ; i++)
+  {
+  std::cout << i << std::endl;
+  } 
+}
+ 
+ #+END_SRC
 
 # C++ Primer 2.1.2
 ** Varible with fixed values
