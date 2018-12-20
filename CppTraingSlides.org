@@ -149,16 +149,16 @@ auto q = (0xE)+2.0; // OK
 int main() 
 {
 std::cout << "sizeof(123u) " << sizeof(123u) << std::endl;
-std::cout << "ssizeof(123ul) " << sizeof(123ul) << std::endl;
-std::cout << "ssizeof(123ull) " << sizeof(123ull) << std::endl;
+std::cout << "sizeof(123ul) " << sizeof(123ul) << std::endl;
+std::cout << "sizeof(123ull) " << sizeof(123ull) << std::endl;
 } 
 
 #+END_SRC
 
-#+RESULTS[a8431c43c8eadc3d9ba3bb3f46ae1887f820de43]:
-| sizeof(123u)    | 4 |
-| ssizeof(123ul)  | 4 |
-| ssizeof(123ull) | 8 |
+#+RESULTS[2cfde06023a5646abe0954ea11a40a6b81af5906]:
+| sizeof(123u)   | 4 |
+| sizeof(123ul)  | 4 |
+| sizeof(123ull) | 8 |
 
 # https://en.cppreference.com/w/cpp/language/integer_literal 
 ** Variable initialization
