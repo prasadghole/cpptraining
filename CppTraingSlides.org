@@ -84,37 +84,7 @@ is called as build process.
 6. Inheritance
 7. Polymorphism 
 
-   
-* Variables and Fundamental Data Types
-A variable is a named piece of memory a programmer defines.
-Every variable has a type which defines what kind of data it can store.
-** Variable Type
- | Category  | Type                      | Meaning       | Example |   |
- |-----------+---------------------------+---------------+---------+---|
- | boolean   | bool                      | true or false |         |   |
- | Character | char                      |               |         |   |
- | Integer   | short,int,long,long long  |               |         |   |
- | floating  | float, double,long double |               |         |   |
- | void      | no type                   |               |         |   |
-** bool 
-#+BEGIN_SRC C++  :exports both :cache yes
-#include <iostream> 
-int main() 
-{
-std::cout << std::boolalpha << true << std::endl; 
-std::cout << std::boolalpha << false << std::endl;
- std::cout << std::noboolalpha << true << std::endl;
- std::cout << std::noboolalpha << false << std::endl;
-} 
-#+END_SRC 
-
-#+RESULTS[761dc02922fa049315904bec55f4709d19fa6a39]:
-|  true |
-| false |
-|     1 |
-|     0 |
-
-** Literals
+* Literals
 Literals are tokens of C++ program that represent constant values embedded in source code.
 *** Interger Literals
 | Literal     | Desctiption                                                       |  Example |
@@ -161,6 +131,31 @@ std::cout << "sizeof(123ull) " << sizeof(123ull) << std::endl;
 | sizeof(123ull) | 8 |
 
 # https://en.cppreference.com/w/cpp/language/integer_literal 
+** Variable Type
+ | Category  | Type                      | Meaning       | Example |   |
+ |-----------+---------------------------+---------------+---------+---|
+ | boolean   | bool                      | true or false |         |   |
+ | Character | char                      |               |         |   |
+ | Integer   | short,int,long,long long  |               |         |   |
+ | floating  | float, double,long double |               |         |   |
+ | void      | no type                   |               |         |   |
+** bool 
+#+BEGIN_SRC C++  :exports both :cache yes
+#include <iostream> 
+int main() 
+{
+std::cout << std::boolalpha << true << std::endl; 
+std::cout << std::boolalpha << false << std::endl;
+ std::cout << std::noboolalpha << true << std::endl;
+ std::cout << std::noboolalpha << false << std::endl;
+} 
+#+END_SRC 
+
+#+RESULTS[761dc02922fa049315904bec55f4709d19fa6a39]:
+|  true |
+| false |
+|     1 |
+|     0 |
 ** Variable initialization
 #+BEGIN_SRC C++
 int Number_of_Employee = 100;
@@ -217,6 +212,11 @@ int main()
 ** Sting Literals
 ** Sizeof operator
 Is used to obtain the number of bytes occupied by the type, variable or result of an expression.
+
+   
+* Variables and Fundamental Data Types
+A variable is a named piece of memory a programmer defines.
+Every variable has a type which defines what kind of data it can store.
 
 * Complex Data Structure
 ** Array
@@ -349,6 +349,15 @@ These operators allowes to manuplate individual bits of integer type variables.
 * Header Files
 * Pointers 
 * Reference 
+  A referance is an alternate name for variable or object. All referance must be initialized. All operations performed 
+on refernces act on binded variable or object.
+#+BEGIN_SRC C++ :eval no 
+int original_var = 10;
+int &ref_var = original_var;
+int &ref_lit = 100; //Error can't refer to literal constant
+float &fref_var = original_var;  // Reference should be of same type
+
+#+END_SRC
 * Array
 * struct
 * enumerations 
