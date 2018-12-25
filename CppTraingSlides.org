@@ -347,7 +347,6 @@ These operators allowes to manuplate individual bits of integer type variables.
 ** Storage classes and scope
 
 * Header Files
-* Pointers 
 * Reference 
   A referance is an alternate name for variable or object. All referance must be initialized. All operations performed 
 on refernces act on binded variable or object.
@@ -358,10 +357,37 @@ int &ref_lit = 100; //Error can't refer to literal constant
 float &fref_var = original_var;  // Reference should be of same type
 
 #+END_SRC
+* Pointers 
+** references to pointers
+A reference is not an object hence we may not have pointers to references but we can have reference to pointer.
+#+BEGIN_SRC C++ :exports both :cache yes
+#include <iostream>
+int main()
+{
+
+int i = 100;
+int *iptr = &i;
+int *&iptrref = iptr;
+
+std::cout << "Value of i =\t " << i << std::endl ;
+std::cout << "Value of i using poiner iptr =\t " << *iptr << std::endl ;
+std::cout << "Value of i using reference to pointer =\t " << *iptrref << std::endl ;
+}
+
+#+END_SRC
+
+#+RESULTS[3445f968a3e13c9130866007256095b7a72fcc32]:
+| Value of i =                            | 100 |
+| Value of i using poiner iptr =          | 100 |
+| Value of i using reference to pointer = | 100 |
+
 * Array
 * struct
 * enumerations 
-* Classes and Objects
+* Classes and Object
+Object is any real world entity which has attributes, behaviour , state and identity.
+Compared to object is template or blueprint of object from which many objects can be created. 
+object is an instance of a class. 
 * Constructor
 * copy constructor
 * Destructor
