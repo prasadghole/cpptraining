@@ -394,7 +394,71 @@ object is an instance of a class.
 * Member initializer list
 * Inheritance 
 * Interfaces
-* const
+* const qualifier 
+const qualified variable value can't be changed. Because we can't change the value of const 
+variable it must be initialized when we create it.
+
+#+BEGIN_SRC C++ :eval no :cache yes
+const int buffersize = 100;
+buffersize = 200 ; //ERROR can't change the value
+const int length; //ERROR must be initialize 
+#+END_SRC
+** const objects scope
+   By default all the const objects have local scope. Hence when we split program in multiple files.
+Every file that uses const must have initialzer which can have different value 
+
+In order to have single instance of const object shared across multiple file we should use qualifier *extern* 
+in both definition and declarations 
+#+BEGIN_SRC C++ :eval no :caches yes
+//.CPP file definition
+extern const buffersize = 20;
+//.h file declarations
+extern const buffersize;
+#+END_SRC
+
+** Reference to cost
+Reference to constant object can't be used to change object to which it refers to.
+#+BEGIN_SRC C++ :eval no :cache yes
+#include <iostream>
+
+int main()
+{
+const int cint = 100;
+const int &refcint = cint;
+int &refint = cint; //ERROR can't have non const reference to const objects
+}
+
+#+END_SRC
+We can initialize a reference to const from any expression that can be converted to type of reference.
+We can bind reference to *const* to *nonconst* object or literal or expression.
+
+#+BEGIN_SRC C++ :cache yes
+
+#include <iostream>
+
+int main()
+{
+
+int i = 42;
+
+const int &r1 = i;
+const int &r2 = 43; // OK reference to const 
+const int &r3 = r1 * 2;
+
+std::cout << "r1 \t " << r1 << std::endl;
+std::cout << "r2 \t " << r2 << std::endl;
+std::cout << "r3 \t " << r3 << std::endl;
+
+//int &r4 = 43; //ERROR non const reference to constant
+} 
+
+#+END_SRC
+
+#+RESULTS[263f6003f9aa474164f593473f1c01b354089ac7]:
+| r1 | 42 |
+| r2 | 43 |
+| r3 | 84 |
+
 * mutable
 * operator overloading 
 * this keyword
