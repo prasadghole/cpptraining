@@ -60,6 +60,7 @@ g++ Program.cpp
 |               |                        |
 
 * Build Process
+** Pre Processing
 ** Compiling
 #+BEGIN_SRC shell :exports code
 g++ --std=c++y hello.cpp -o hello.cpp
@@ -75,6 +76,8 @@ g++ --std=c++y hello.cpp -o hello.cpp
 
 Converting C++ source code in machine language which can be exectured by underline microprocessor
 is called as build process.
+** Loading 
+** Execution
 * Language Features
 1. Statically typed
 2. Support procedural , object oriented and generic programming paradigms
@@ -381,15 +384,51 @@ std::cout << "Value of i using reference to pointer =\t " << *iptrref << std::en
 | Value of i using poiner iptr =          | 100 |
 | Value of i using reference to pointer = | 100 |
 
+** nullptr
+** Advice
+Uninitalized pointers are very common cause of run time errors or program crashes. When an uninitialized pointer 
+is dereferanced it will cause run time error.
+If there is no way to have valid address to pointer then it should be initialized to *nullptr* 
+** void pointers
+A void pointer is a special pointer which can hold the address of any object. But can't be used to operate on 
+object.
 * Array
 * struct
 * enumerations 
+* Type Alias 
+A type alias is a name that is synonym for other type. It helps to simplify complicated type definitions.
+We can use *typedef* keyword
+#+BEGIN_SRC C :eval no
+
+typedef double amount; // amount is synonym for double
+
+using amount = double; //C++11
+
+#+END_SRC
+
+* auto type specifier
+compiler can auto deduce type based on evaluation of inital value.
+#+BEGIN_SRC C :eval no
+auto PI = 3.14; //PI is double 
+auto var ; //Error must have inital value
+
+#+END_SRC
+
 * Classes and Object
 Object is any real world entity which has attributes, behaviour , state and identity.
 Compared to object is template or blueprint of object from which many objects can be created. 
 object is an instance of a class. 
 * Constructor
-* copy constructor
+** Default 
+** Copy constructor
+** initializer list
+** Explicite
+** Constructor delegation
+** Default values to member
+* Destructor
+A destructor is a function that is called every time when an object is destroyed.
+Never thorow an exception in destructor. (destructors are implicitly defined as *noexcept*)
+If class contains virtual functions the destructor should be virtual.
 * Destructor
 * Member initializer list
 * Inheritance 
@@ -459,7 +498,31 @@ std::cout << "r3 \t " << r3 << std::endl;
 | r2 | 43 |
 | r3 | 84 |
 
+** Pointers and constant
+*** Pointer to const 
+#+BEGIN_SRC C :eval no 
+
+const float PI = 3.14;
+float *ptr = &PI ; //ERROR ptr is non-const
+const float *fptr = &PI ; //Okay
+
+#+END_SRC
+*** Const pointer
+A const pointer once initialized its value i.e. address is points to can't be changed. But we can change
+the value at location it points to.
+#+BEGIN_SRC C :eval no
+int data = 100;
+int * const cptr = &data;
+*cptr = 200; //Value points to can be changed
+++cptr ; //Error Pointer value can't be chaanged
+
+#+END_SRC
+
+To easily understand this declarations please read from right to left.
+
 * mutable
+* constexpr
+A constant expression is an expression whose value can't be changedand that can be evaluated at complile time.
 * operator overloading 
 * this keyword
 * object lifetime
@@ -468,3 +531,20 @@ std::cout << "r3 \t " << r3 << std::endl;
 * Unions
 * Why virtual destructors
 * Casting
+* Templates
+** Function Template
+#+BEGIN_SRC C :exports no :eval no
+#ifndef min
+#define min(a,b) (((a) < (b)) ? (a) : (b))
+#endif
+
+return (a<b) ? a : b;
+}
+
+
+#+END_SRC
+# Apllied C++, Practical Techniques for building better software
+* Advance Topics
+** Return value optimization
+** Copy elision
+** RAII
