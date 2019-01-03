@@ -44,7 +44,6 @@ C++ in 1983.
   For windows we can download latest precompiled binaries for gcc tool chain at tdm-gcc.trdragon.org
   
 
-
 * Build Tools
   gnu toolchain provide g++ command to build executable from source code.
 #+BEGIN_SRC shell
@@ -216,7 +215,6 @@ int main()
 ** Sizeof operator
 Is used to obtain the number of bytes occupied by the type, variable or result of an expression.
 
-   
 * Variables and Fundamental Data Types
 A variable is a named piece of memory a programmer defines.
 Every variable has a type which defines what kind of data it can store.
@@ -228,6 +226,26 @@ Every variable has a type which defines what kind of data it can store.
 ** Unions
 ** Enumerations
 
+* Statements
+** null statements
+A simple with semicolon *;* is a null statement. Its useful in case we need statement but no program 
+logic. 
+#+BEGIN_SRC C++ :eval no
+
+while(cin >> input && input ~!= "end" )
+{
+    ; // Do nothing
+}
+
+#+END_SRC
+
+#+BEGIN_SRC C++ :eval no 
+
+for ( int i = 0; i < 100 ; i++) ;
+//This count will never get increamented due to null statement 
+   count++ ;
+
+#+END_SRC
 * Flow Control
 ** if
 ** while
@@ -404,6 +422,11 @@ object.
 * Array
 * struct
 * enumerations 
+An enumeration is a distinct type whose values are restricated to range of integral values.
+#+BEGIN_SRC C++ :export both :cache yes
+
+
+#+END_SRC
 * Type Alias 
 A type alias is a name that is synonym for other type. It helps to simplify complicated type definitions.
 We can use *typedef* keyword
@@ -485,6 +508,10 @@ std::cout  << "i / j =\t" << static_cast<double>(i) / j << std::endl;
 
 #+RESULTS[44645e1eac014c9e093d827187a0203155879007]:
 | i / j = | 3.33333 |
+
+** const cast
+const cast is used for cast away the constant ness of variable.
+only const cast can be used for remove const ness.
 
 * auto type specifier
 compiler can auto deduce type based on evaluation of inital value.
