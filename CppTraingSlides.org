@@ -304,6 +304,9 @@ return 0;
 | count | 21 |
 | total |  1 |
 
+*** Prefer prefix over postfix
+When postfix operator is used compiler must store original value , then perform operations and then increament. If
+we don't need unincreamented value this is costly operation.
 
 ** Comparison
 For various logical condition checking we need to compare to variables using comparison operator.
@@ -340,6 +343,12 @@ These operators allowes to manuplate individual bits of integer type variables.
 | Bitwise or       | x \vert y |
 | Bitwise Xor      | x ^y      |
 
+** logical Not Operator
+Invert the truth value.
+** conditional 
+#+BEGIN_SRC C :eval no :cache no 
+string result = (marks < 35 ) ? "Fail" : "Pass" ;
+#+END_SRC
 
 * Iteration
 
@@ -368,18 +377,18 @@ A reference is not an object hence we may not have pointers to references but we
 int main()
 {
 
-int i = 100;
-int *iptr = &i;
-int *&iptrref = iptr;
+  int i = 100;
+  int *iptr = &i;
+  int *&iptrref = iptr;
 
-std::cout << "Value of i =\t " << i << std::endl ;
-std::cout << "Value of i using poiner iptr =\t " << *iptr << std::endl ;
-std::cout << "Value of i using reference to pointer =\t " << *iptrref << std::endl ;
+  std::cout << "Value of i =\t " << i << std::endl ;
+  std::cout << "Value of i using poiner iptr =\t " << *iptr << std::endl ;
+  std::cout << "Value of i using reference to pointer =\t " << *iptrref << std::endl ;
 }
 
 #+END_SRC
 
-#+RESULTS[3445f968a3e13c9130866007256095b7a72fcc32]:
+#+RESULTS[817c89ad6b559f15e2a9933042c38db3c2f5816d]:
 | Value of i =                            | 100 |
 | Value of i using poiner iptr =          | 100 |
 | Value of i using reference to pointer = | 100 |
@@ -398,7 +407,7 @@ object.
 * Type Alias 
 A type alias is a name that is synonym for other type. It helps to simplify complicated type definitions.
 We can use *typedef* keyword
-#+BEGIN_SRC C :eval no
+#+BEGIN_SRC C :eval no :caches no
 
 typedef double amount; // amount is synonym for double
 
@@ -406,14 +415,38 @@ using amount = double; //C++11
 
 #+END_SRC
 
+* Type conversion
+** Implicit
+Conversions which are carried out by compiler without user intervention are called as implicit conversions.
+#+BEGIN_SRC C :eval no 
+
+int ivar = 3.14 + 5 ; //Result is 8 instead of 8.14 
+
+#+END_SRC
 * auto type specifier
 compiler can auto deduce type based on evaluation of inital value.
-#+BEGIN_SRC C :eval no
+#+BEGIN_SRC C :eval no :caches no
 auto PI = 3.14; //PI is double 
 auto var ; //Error must have inital value
 
 #+END_SRC
 
+* decltype specifier
+When we want compiler to deduce type from expression but don't want to use expression
+to initialize the variable, we can use *decltype* specifier.
+#+BEGIN_SRC C :eval no :caches no
+const int cint = 0;
+
+decltype(cint) x = 100; // x is const int
+
+#+END_SRC
+
+#+BEGIN_SRC C :eval no :caches no
+decltype(x) y ; // y has same type as x
+decltype((x)) z ; // Error z is int& hence must be initialized
+#+END_SRC
+
+# C++ primer
 * Classes and Object
 Object is any real world entity which has attributes, behaviour , state and identity.
 Compared to object is template or blueprint of object from which many objects can be created. 
