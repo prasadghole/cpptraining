@@ -415,14 +415,77 @@ using amount = double; //C++11
 
 #+END_SRC
 
-* Type conversion
-** Implicit
+* Implicit Type conversion
 Conversions which are carried out by compiler without user intervention are called as implicit conversions.
 #+BEGIN_SRC C :eval no 
 
 int ivar = 3.14 + 5 ; //Result is 8 instead of 8.14 
 
 #+END_SRC
+** Array to Pointer
+This is implicit conversion where array will be converted to pointer to first element in array.
+
+#+BEGIN_SRC C :eval no 
+char str[] = "Hello World" ;
+char *cptr = str; //cptr points to H str[0]
+
+#+END_SRC
+** Pointer to numric 
+A constant value of 0 and *nullptr* will be converted to pointer type.
+** bool 
+if value is 0 it will yeild boolean false.
+** const conversions
+we can convert non constant type to corrsponding const type. 
+#+BEGIN_SRC C :eval no
+int i;
+
+const int &j  = i; //non const to reference to const 
+const int *p = &i ; // address of non const to address of const
+
+#+END_SRC
+
+* Explicite Type conversion
+Need of type casting
+#+BEGIN_SRC C++ :export both :cache yes
+#include <iostream>
+
+int main()
+{
+int i = 10;
+int j = 3;
+
+//int division with int produce int 
+std::cout  << "i / j =\t" << i / j << std::endl;
+
+}
+
+#+END_SRC
+
+#+RESULTS[b6da320690ecae4f7c2f6fc32ccd786fd3239597]:
+| i / j = | 3 |
+
+To convert result to floating point number one of the operand should be of type float or double.
+Or shoudl be temporarly promoted to double uisng casting.
+
+** static cast
+#+BEGIN_SRC C++ :export both :cache yes
+#include <iostream>
+
+int main()
+{
+int i = 10;
+int j = 3;
+
+//int division with int produce int 
+std::cout  << "i / j =\t" << static_cast<double>(i) / j << std::endl;
+
+}
+
+#+END_SRC
+
+#+RESULTS[44645e1eac014c9e093d827187a0203155879007]:
+| i / j = | 3.33333 |
+
 * auto type specifier
 compiler can auto deduce type based on evaluation of inital value.
 #+BEGIN_SRC C :eval no :caches no
