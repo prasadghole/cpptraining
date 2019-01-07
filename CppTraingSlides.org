@@ -453,6 +453,13 @@ std::cout  << "Size of INT in bits  = \t " << INT << std::endl;
 #+RESULTS[3359aaa20de4f3209301fe18be95a3a636c59666]:
 | Size of INT in bits  = | 32 |
 
+** specifying enum size
+** Enum as function parameter
+Enum can be passed to function taking integer parameter but not otherway.
+When passed for int parameter enum is promoted to integer.
+
+
+
 * Type Alias 
 A type alias is a name that is synonym for other type. It helps to simplify complicated type definitions.
 We can use *typedef* keyword
@@ -579,6 +586,52 @@ A destructor is a function that is called every time when an object is destroyed
 Never thorow an exception in destructor. (destructors are implicitly defined as *noexcept*)
 If class contains virtual functions the destructor should be virtual.
 * Destructor
+* static 
+** static data member 
+static member have only one copy for entire class. static members are shared by all class instances.
+static class members will be initialized out side class and will have life time of entier program.
+Use scope resolution operator to access static members of class.
+
+#+BEGIN_SRC C++ :eval no 
+class Circle {
+public:
+     static doubel PI;
+}
+
+//Initialization
+//static keyword is only used in declaration and not in initialization
+double Circle::PI = 3.14F;
+
+#+END_SRC
+
+** static member functions
+A function can be declared static it can *only* access static members. 
+** static local variable
+Local variable inside function when declared constant preserve its value across multiple function call.
+function static variable have full life time but only visible in function scope.
+#+BEGIN_SRC C++ :eval no
+int foo()
+{
+static int callcounter = 0;
+callcounter++;
+}
+
+#+END_SRC
+** static global
+Variable declared outside function with static keyword has file scope but have full program lifetime.
+** In class initialization of static data members
+static data members having const integral type or constexpr must be initialized when defined in class.
+#+BEGIN_SRC C++ :eval no
+class Employee {
+public:
+    static int retire_age = 58;
+
+}
+// Must be defined without initialization
+int Employee::retire_age; 
+
+
+#+END_SRC
 * Member initializer list
 * Inheritance 
 * Interfaces
