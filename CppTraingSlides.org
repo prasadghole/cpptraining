@@ -420,6 +420,34 @@ If there is no way to have valid address to pointer then it should be initialize
 A void pointer is a special pointer which can hold the address of any object. But can't be used to operate on 
 object.
 * Array
+** Declaration
+An array is a data structure used for storing collection of values having same data type and of fixed size.
+Number of elements in array must be known compile time hence shoulde be constant expression.
+
+#+BEGIN_SRC C++ :eval no 
+
+//Declaration
+int myarray[3];
+
+//assignment 
+myarray[0] = 100;
+myarray[1] = 200;
+myarray[2] = 300;
+
+#+END_SRC
+
+
+#+BEGIN_SRC C++ :eval no 
+int *iptr[10]; // array of 10 pointers to integer
+int arr[10] ; 
+int (*ptarr)[10] = &arr ; // ptarr is pointer to array of 10 ints
+int (&refarr)[10] = arr ; // refarr is referance to array of 10 int
+
+#+END_SRC
+** Array element access
+Individual array elements can be accessed using subscript *[]* operator.
+** Array to pointer implicit conversion
+
 * struct
 * enumerations 
 An enumeration is a distinct type whose values are restricated to range of integral values.
@@ -553,6 +581,26 @@ auto PI = 3.14; //PI is double
 auto var ; //Error must have inital value
 
 #+END_SRC
+
+#+BEGIN_SRC C++ :export both :cache yes :flags -std=c++11
+
+#include <iostream>
+int main()
+{
+    char name[] = "Hello World";
+
+    for ( auto c : name)
+    {
+      std::cout << c << "" ;
+    }
+}
+
+
+
+#+END_SRC
+
+#+RESULTS[a74c6b00db0a3390b6183abcea48ccca12abf271]:
+: Hello World 
 
 * decltype specifier
 When we want compiler to deduce type from expression but don't want to use expression
