@@ -446,47 +446,62 @@ int (&refarr)[10] = arr ; // refarr is referance to array of 10 int
 #+END_SRC
 ** Array element access
 Individual array elements can be accessed using subscript *[]* operator.
-** Array to pointer implicit conversion
+** Array and pointer 
+In C and C++ for most of cases pointers and array are interchangeble. 
+In most cases when we use array compiler most of time substitutes with pointer to first element.
 
-* struct
-* enumerations 
-An enumeration is a distinct type whose values are restricated to range of integral values.
-By default enumeration starts with 0 and increamented subsequently. but you can provide user
-defined values to 1 or more enumerations. 
-We can have enumerations with same value.
+#+BEGIN_SRC C++ :eval no
+char names[] =  "Hello World";
 
-** unscoped enumeration
-#+BEGIN_SRC C++ :export code :cache yes
-//Enum with default values starting from 0
-enum colour {red,green,blue};
-//Enum with user defined value
-enum types {INT = 32 , SHORT = 16 , CHAR = 8 , LONG = 32}
+char *c = names; // C points to H
 #+END_SRC
 
+** Array begin end
 
-** scoped enumeration
-#+BEGIN_SRC C++ :exports both :cache yes :flags 
+#+BEGIN_SRC C++ :export both :cache yes
 #include <iostream>
-enum class grades { fail,pass, distinction};
-enum types {INT = 32 , SHORT = 16 , CHAR = 8 , LONG = 32};
+
 int main()
 {
-//ERROR can't convert to int implicitly as strongly typed enumeration 
-//std::cout  << "Fail = \t " << grades::fail << std::endl; 
-std::cout  << "Size of INT in bits  = \t " << INT << std::endl; 
+    char name[] =  "Hello World";
+    char *start = begin(name)
 
+  for(int i = begin(name) i < end(name);i++)
+  {
+  std::cout << name[i] << std::endl;
+  }
 }
 #+END_SRC
 
-#+RESULTS[3359aaa20de4f3209301fe18be95a3a636c59666]:
-| Size of INT in bits  = | 32 |
+#+RESULTS[846c81678f5da62260ebf1093a6124c726a9a843]:
 
-** specifying enum size
+
+* struct
+* enumerations 
+An enumeration is a distinct type whose values are restricated to range of integral values. 
+By default enumeration starts with 0 and increamented subsequently. but you can provide user defined values to 1 or more enumerations.
+We can have enumerations with same value. 
+** unscoped enumeration 
+#+BEGIN_SRC C++ :export code :cache yes
+ //Enum with default values starting from 0 
+enum colour {red,green,blue}; //Enum with user defined value 
+enum types {INT = 32 , SHORT = 16 , CHAR = 8 , LONG = 32} 
+#+END_SRC
+* scoped enumeration
+#+BEGIN_SRC C++ :exports both :cache yes :flags 
+#include <iostream> 
+enum class grades { fail,pass, distinction};
+ enum types {INT = 32 , SHORT = 16 , CHAR = 8 , LONG = 32}; 
+
+int main() 
+{
+//ERROR can't convert to int implicitly as strongly typed enumeration 
+//std::cout  << "Fail = \t " << grades::fail << std::endl; 
+std::cout  << "Size of INT in bits  = \t " << INT << std::endl;} 
+#+END_SRC 
+** specifying enum size 
 ** Enum as function parameter
-Enum can be passed to function taking integer parameter but not otherway.
-When passed for int parameter enum is promoted to integer.
-
-
+Enum can be passed to function taking integer parameter but not otherway. When passed for int parameter enum is promoted to integer.
 
 * Type Alias 
 A type alias is a name that is synonym for other type. It helps to simplify complicated type definitions.
