@@ -458,22 +458,27 @@ char *c = names; // C points to H
 
 ** Array begin end
 
-#+BEGIN_SRC C++ :export both :cache yes
+#+BEGIN_SRC C++ :export both :cache yes :flags -std=c++11
 #include <iostream>
+#include <vector>
 
 int main()
 {
     char name[] =  "Hello World";
-    char *start = begin(name)
+    char *start = std::begin(name);
+    char *end = std::end(name);
 
-  for(int i = begin(name) i < end(name);i++)
+    while (start < end)
   {
-  std::cout << name[i] << std::endl;
+    std::cout << *(start++) << " " ;
   }
+    std::cout << std::endl;
 }
 #+END_SRC
 
-#+RESULTS[846c81678f5da62260ebf1093a6124c726a9a843]:
+#+RESULTS[bef626bd9789e5fde5819c1ef63f7100828f042e]:
+: H e l l o   W o r l d  
+
 
 
 * struct
