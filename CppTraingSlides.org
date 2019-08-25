@@ -456,6 +456,7 @@ char names[] =  "Hello World";
 char *c = names; // C points to H
 #+END_SRC
 
+* STL array
 ** Array begin end
 
 #+BEGIN_SRC C++ :export both :cache yes :flags -std=c++11
@@ -638,7 +639,8 @@ decltype((x)) z ; // Error z is int& hence must be initialized
 #+END_SRC
 
 # C++ primer
-* Classes and Object
+* class vs structs
+ * Classes and Object
 Object is any real world entity which has attributes, behaviour , state and identity.
 Compared to object is template or blueprint of object from which many objects can be created. 
 object is an instance of a class. 
@@ -654,55 +656,9 @@ A destructor is a function that is called every time when an object is destroyed
 Never thorow an exception in destructor. (destructors are implicitly defined as *noexcept*)
 If class contains virtual functions the destructor should be virtual.
 * Destructor
-* static 
-** static data member 
-static member have only one copy for entire class. static members are shared by all class instances.
-static class members will be initialized out side class and will have life time of entier program.
-Use scope resolution operator to access static members of class.
-
-#+BEGIN_SRC C++ :eval no 
-class Circle {
-public:
-     static doubel PI;
-}
-
-//Initialization
-//static keyword is only used in declaration and not in initialization
-double Circle::PI = 3.14F;
-
-#+END_SRC
-
-** static member functions
-A function can be declared static it can *only* access static members. 
-** static local variable
-Local variable inside function when declared constant preserve its value across multiple function call.
-function static variable have full life time but only visible in function scope.
-#+BEGIN_SRC C++ :eval no
-int foo()
-{
-static int callcounter = 0;
-callcounter++;
-}
-
-#+END_SRC
-** static global
-Variable declared outside function with static keyword has file scope but have full program lifetime.
-** In class initialization of static data members
-static data members having const integral type or constexpr must be initialized when defined in class.
-#+BEGIN_SRC C++ :eval no
-class Employee {
-public:
-    static int retire_age = 58;
-
-}
-// Must be defined without initialization
-int Employee::retire_age; 
-
-
-#+END_SRC
 * Member initializer list
-* Inheritance 
-* Interfaces
+* Copy constructor
+* Object lifetime
 * const qualifier 
 const qualified variable value can't be changed. Because we can't change the value of const 
 variable it must be initialized when we create it.
@@ -790,6 +746,53 @@ int * const cptr = &data;
 
 To easily understand this declarations please read from right to left.
 
+* static local variable
+Local variable inside function when declared constant preserve its value across multiple function call.
+function static variable have full life time but only visible in function scope.
+#+BEGIN_SRC C++ :eval no
+int foo()
+{
+static int callcounter = 0;
+callcounter++;
+}
+
+#+END_SRC
+** static global
+Variable declared outside function with static keyword has file scope but have full program lifetime.
+** In class initialization of static data members
+static data members having const integral type or constexpr must be initialized when defined in class.
+#+BEGIN_SRC C++ :eval no
+class Employee {
+public:
+    static int retire_age = 58;
+
+}
+// Must be defined without initialization
+int Employee::retire_age; 
+
+
+#+END_SRC
+* static data member 
+static member have only one copy for entire class. static members are shared by all class instances.
+static class members will be initialized out side class and will have life time of entier program.
+Use scope resolution operator to access static members of class.
+
+#+BEGIN_SRC C++ :eval no 
+class Circle {
+public:
+     static doubel PI;
+}
+
+//Initialization
+//static keyword is only used in declaration and not in initialization
+double Circle::PI = 3.14F;
+
+#+END_SRC
+
+* static member functions
+A function can be declared static it can *only* access static members. 
+* Inheritance 
+* Interfaces
 * mutable
 * constexpr
 A constant expression is an expression whose value can't be changedand that can be evaluated at complile time.
@@ -800,9 +803,16 @@ A constant expression is an expression whose value can't be changedand that can 
 * Namespaces 
 * Unions
 * Why virtual destructors
+* Using static libraries
+* Using dynamic libraries
 * Casting
+* static casting
+* dynamic casting
+* const casting
+* reinterpret casting
+* lambdas
 * Templates
-** Function Template
+* Function Template
 #+BEGIN_SRC C :exports no :eval no
 #ifndef min
 #define min(a,b) (((a) < (b)) ? (a) : (b))
@@ -815,6 +825,8 @@ return (a<b) ? a : b;
 #+END_SRC
 # Apllied C++, Practical Techniques for building better software
 * Advance Topics
-** Return value optimization
-** Copy elision
-** RAII
+* Return value optimization
+* Copy elision
+* RAII
+* Function Pointers
+* Precompiled Headers
